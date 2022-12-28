@@ -1,0 +1,66 @@
+version: '3'
+
+services:
+  control:
+    image: ubuntu
+    hostname: cntrl
+    command: sleep infinity
+    ports:
+      - "2222:22"
+    networks:
+      - cs423-assignment-4
+    environment:
+      - HOSTNAME=cntrl
+      - PASSWORD=shaz
+
+  node1:
+    image: ubuntu
+    hostname: n1
+    command: sleep infinity
+    ports:
+      - "2223:22"
+    networks:
+      - cs423-assignment-4
+    environment:
+      - HOSTNAME=n1
+      - PASSWORD=shaz
+
+  node2:
+    image: ubuntu
+    hostname: n2
+    command: sleep infinity
+    ports:
+      - "2224:22"
+    networks:
+      - cs423-assignment-4
+    environment:
+      - HOSTNAME=n2
+      - PASSWORD=shaz
+
+  node3:
+    image: ubuntu
+    hostname: n3
+    command: sleep infinity
+    ports:
+      - "2225:22"
+    networks:
+      - cs423-assignment-4
+    environment:
+      - HOSTNAME=n3
+      - PASSWORD=shaz
+
+  node4:
+    image: ubuntu
+    hostname: n4
+    command: sleep infinity
+    ports:
+      - "2226:22"
+    networks:
+      - cs423-assignment-4
+    environment:
+      - HOSTNAME=n4
+      - PASSWORD=shaz
+
+networks:
+  cs423-assignment-4:
+    driver: bridge
